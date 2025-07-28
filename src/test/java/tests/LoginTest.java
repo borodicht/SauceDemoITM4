@@ -33,13 +33,4 @@ public class LoginTest extends BaseTest {
                 "Epic sadface: Username and password do not match any user in this service",
                 "Сообщение не соотвествует");
     }
-
-    @Test
-    public void checkLogin() {
-        loginPage.open();
-        loginPage.login("standard_user", "secret_sauce");
-        productsPage.addToCart("");
-        productsPage.addToCart("");
-        productsPage.addToCart("");
-    }
 }
