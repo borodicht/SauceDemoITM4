@@ -10,8 +10,8 @@ public class LocatorsTest extends BaseTest {
     @Test
     public void testAddToCartAndVerify() {
         driver.get("https://www.saucedemo.com/");
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
+        driver.findElement(By.id("user-name")).sendKeys(user);
+        driver.findElement(By.id("password")).sendKeys(password);
         driver.findElement(By.id("login-button")).click();
         assertTrue(driver.findElement(By.className("title")).isDisplayed());
         String expectedItemName = driver.findElement(

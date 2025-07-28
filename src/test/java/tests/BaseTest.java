@@ -20,6 +20,9 @@ public class BaseTest {
     LoginPage loginPage;
     ProductsPage productsPage;
 
+    String user = System.getProperty("user");
+    String password = System.getProperty("password");
+
     @BeforeMethod
     public void setup() {
         softAssert = new SoftAssert();
