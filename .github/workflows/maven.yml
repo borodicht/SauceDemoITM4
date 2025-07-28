@@ -17,10 +17,16 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Setup browser
+    - uses: abhi1693/setup-browser@v0.3.4
+      with:
+        browser: firefox
+        version: latest
     - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
